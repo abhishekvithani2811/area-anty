@@ -132,7 +132,7 @@ export default function AreaCalculator() {
         zoom={mapZoom}
       />
 
-      {/* 2. Top Header Navigation (Floating at z-[9999], Search Removed) */}
+      {/* 2. Top Header Navigation (Floating at z-[9999]) */}
       <header className="absolute top-2.5 left-2.5 right-2.5 z-[9999] flex items-center justify-between gap-2 pointer-events-none">
         {/* Brand Logo */}
         <div className="flex items-center gap-2 pointer-events-auto">
@@ -227,9 +227,8 @@ export default function AreaCalculator() {
         </div>
       </header>
 
-      {/* 3. Responsive Measurement HUD Overlay */}
-      {/* Desktop: Top Left (top-14 left-2.5) | Mobile: Bottom overlay (bottom-2.5 left-2.5 right-2.5) */}
-      <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-auto sm:right-auto sm:top-14 sm:left-2.5 z-[9999]">
+      {/* 3. Responsive Measurement HUD Overlay Container */}
+      <div className="sm:absolute sm:top-14 sm:left-2.5 z-[9999] pointer-events-none">
         <MeasurementHUD
           areaSqMeters={areaSqMeters}
           perimeterMeters={perimeterMeters}
